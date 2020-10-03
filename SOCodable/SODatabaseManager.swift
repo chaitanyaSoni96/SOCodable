@@ -65,4 +65,11 @@ class SODatabaseManager {
         return existingDBCacheArray?.first
     }
     
+    func deleteAll() {
+        
+        let context = persistentContainer.viewContext
+        try? context.execute(NSBatchDeleteRequest(fetchRequest: NSFetchRequest<NSFetchRequestResult>(entityName: "DBCacheMO")))
+        
+    }
+    
 }

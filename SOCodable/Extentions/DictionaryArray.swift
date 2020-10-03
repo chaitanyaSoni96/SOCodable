@@ -1,5 +1,5 @@
 //
-//  Dict.swift
+//  DictionaryArray.swift
 //  SOCodable
 //
 //  Created by Chaitanya Soni on 03/10/20.
@@ -7,8 +7,8 @@
 //
 
 import Foundation
-extension Dictionary {
 
+extension Sequence where Iterator.Element == [String: Any] {
     var jsonString: String {
         let invalidJson = "Not a valid JSON"
         do {
@@ -18,9 +18,7 @@ extension Dictionary {
             return invalidJson
         }
     }
-
     func printJson() {
         print(jsonString)
     }
-
 }

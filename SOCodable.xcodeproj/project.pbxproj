@@ -13,8 +13,8 @@
 		28374E04252876F1007A64FE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28374E03252876F1007A64FE /* CoreData.framework */; };
 		28374E072528771E007A64FE /* SODatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28374E052528771E007A64FE /* SODatabase.xcdatamodeld */; };
 		28374E0925287748007A64FE /* SOCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374E0825287748007A64FE /* SOCodable.swift */; };
-		28374E0E2528784C007A64FE /* DictArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374E0D2528784C007A64FE /* DictArray.swift */; };
-		28374E102528785A007A64FE /* Dict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374E0F2528785A007A64FE /* Dict.swift */; };
+		28374E0E2528784C007A64FE /* DictionaryArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374E0D2528784C007A64FE /* DictionaryArray.swift */; };
+		28374E102528785A007A64FE /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374E0F2528785A007A64FE /* Dictionary.swift */; };
 		28374E1225287866007A64FE /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374E1125287866007A64FE /* Encodable.swift */; };
 		28374E142528788B007A64FE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374E132528788B007A64FE /* String.swift */; };
 		28374E16252878BA007A64FE /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374E15252878BA007A64FE /* NSObject.swift */; };
@@ -46,8 +46,8 @@
 		28374E03252876F1007A64FE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		28374E062528771E007A64FE /* DBCache.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DBCache.xcdatamodel; sourceTree = "<group>"; };
 		28374E0825287748007A64FE /* SOCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOCodable.swift; sourceTree = "<group>"; };
-		28374E0D2528784C007A64FE /* DictArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictArray.swift; sourceTree = "<group>"; };
-		28374E0F2528785A007A64FE /* Dict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dict.swift; sourceTree = "<group>"; };
+		28374E0D2528784C007A64FE /* DictionaryArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryArray.swift; sourceTree = "<group>"; };
+		28374E0F2528785A007A64FE /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		28374E1125287866007A64FE /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		28374E132528788B007A64FE /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		28374E15252878BA007A64FE /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
@@ -132,8 +132,8 @@
 		28374E0C25287836007A64FE /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
-				28374E0D2528784C007A64FE /* DictArray.swift */,
-				28374E0F2528785A007A64FE /* Dict.swift */,
+				28374E0D2528784C007A64FE /* DictionaryArray.swift */,
+				28374E0F2528785A007A64FE /* Dictionary.swift */,
 				28374E1125287866007A64FE /* Encodable.swift */,
 				28374E132528788B007A64FE /* String.swift */,
 				28374E15252878BA007A64FE /* NSObject.swift */,
@@ -265,11 +265,11 @@
 			files = (
 				28374E142528788B007A64FE /* String.swift in Sources */,
 				28374E0925287748007A64FE /* SOCodable.swift in Sources */,
-				28374E102528785A007A64FE /* Dict.swift in Sources */,
+				28374E102528785A007A64FE /* Dictionary.swift in Sources */,
 				28374E18252878D3007A64FE /* Encodable+NSObject.swift in Sources */,
 				28374E16252878BA007A64FE /* NSObject.swift in Sources */,
 				28374E072528771E007A64FE /* SODatabase.xcdatamodeld in Sources */,
-				28374E0E2528784C007A64FE /* DictArray.swift in Sources */,
+				28374E0E2528784C007A64FE /* DictionaryArray.swift in Sources */,
 				28374E1225287866007A64FE /* Encodable.swift in Sources */,
 				28374E2B2528CA8D007A64FE /* DBCacheMO+CoreDataClass.swift in Sources */,
 				28374E262528C9C9007A64FE /* SODatabaseManager.swift in Sources */,

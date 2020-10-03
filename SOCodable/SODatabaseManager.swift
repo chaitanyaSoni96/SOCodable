@@ -54,8 +54,15 @@ class SODatabaseManager {
         
     }
     
-    func fetch() {
+    func fetch(codableType: String) -> DBCacheMO? {
         
+        let context = persistentContainer.viewContext
+        let fetchRequest = DBCacheMO.createFetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "codableType = '\(codableType)'")
+        
+        let existingDBCacheArray = try? context.fetch(fetchRequest)
+        
+        return existingDBCacheArray?.first
     }
     
 }

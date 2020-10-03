@@ -17,9 +17,9 @@ extension DBCacheMO {
         return NSFetchRequest<DBCacheMO>(entityName: "DBCache")
     }
 
-    @NSManaged public var codableType: String?
-    @NSManaged public var jsonString: String?
-    @NSManaged public var updateDate: Date?
-    @NSManaged public var expiryTime: Date?
+    @NSManaged public var codableType: String
+    @NSManaged public var jsonString: String
+    @NSManaged public var updateDate: Date
+    @NSManaged public var expiryTime: Date
 
 }

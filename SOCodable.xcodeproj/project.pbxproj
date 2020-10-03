@@ -102,8 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				28374DEB252876DC007A64FE /* SOCodable.h */,
-				28374E0825287748007A64FE /* SOCodable.swift */,
 				28374E2D2528CA9D007A64FE /* SOError.swift */,
+				28374E0825287748007A64FE /* SOCodable.swift */,
 				28374E252528C9C9007A64FE /* SODatabaseManager.swift */,
 				28374E282528CA34007A64FE /* Models */,
 				28374E0C25287836007A64FE /* Extentions */,

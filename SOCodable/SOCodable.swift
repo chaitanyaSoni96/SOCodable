@@ -33,8 +33,17 @@ extension SOCodable {
             throw SOError(message: "Save to CoreData Failed")
         }
     }
-    func getFromDisk() {
+    
+    func getFromDisk(ignoresExpiry: Bool = false) -> Self? {
+        let dbCache = SODatabaseManager.shared.fetch(codableType: self.className)
         
+        let whenDataExpires = (dbCache?.updateDate.addingTimeInterval(expiryTime) as Date? ?? Date.init(timeIntervalSince1970: 0)) as Date
+        let dateTimeNow = Date()
+        
+        let expired = dateTimeNow > whenDataExpires
+        
+        let dataFromDB: Self? = Self.fromDict(dbCache?.jsonString.convertToDictionary() ?? [:])
+        return ignoresExpiry ? dataFromDB : expired ? nil : dataFromDB
     }
 }
 

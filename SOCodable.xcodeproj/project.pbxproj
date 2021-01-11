@@ -11,7 +11,6 @@
 		28374DF7252876DD007A64FE /* SOCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374DF6252876DD007A64FE /* SOCodableTests.swift */; };
 		28374DF9252876DD007A64FE /* SOCodable.h in Headers */ = {isa = PBXBuildFile; fileRef = 28374DEB252876DC007A64FE /* SOCodable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		28374E04252876F1007A64FE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28374E03252876F1007A64FE /* CoreData.framework */; };
-		28374E072528771E007A64FE /* SODatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28374E052528771E007A64FE /* SODatabase.xcdatamodeld */; };
 		28374E0925287748007A64FE /* SOCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374E0825287748007A64FE /* SOCodable.swift */; };
 		28374E0E2528784C007A64FE /* DictionaryArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374E0D2528784C007A64FE /* DictionaryArray.swift */; };
 		28374E102528785A007A64FE /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374E0F2528785A007A64FE /* Dictionary.swift */; };
@@ -21,9 +20,18 @@
 		28374E18252878D3007A64FE /* Encodable+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374E17252878D3007A64FE /* Encodable+NSObject.swift */; };
 		28374E1A252878F5007A64FE /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374E19252878F5007A64FE /* Realm.swift */; };
 		28374E262528C9C9007A64FE /* SODatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374E252528C9C9007A64FE /* SODatabaseManager.swift */; };
-		28374E2B2528CA8D007A64FE /* DBCacheMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374E292528CA8D007A64FE /* DBCacheMO+CoreDataClass.swift */; };
-		28374E2C2528CA8D007A64FE /* DBCacheMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374E2A2528CA8D007A64FE /* DBCacheMO+CoreDataProperties.swift */; };
+		28374E2B2528CA8D007A64FE /* DBCache+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374E292528CA8D007A64FE /* DBCache+CoreDataClass.swift */; };
+		28374E2C2528CA8D007A64FE /* DBCache+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374E2A2528CA8D007A64FE /* DBCache+CoreDataProperties.swift */; };
 		28374E2E2528CA9D007A64FE /* SOError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28374E2D2528CA9D007A64FE /* SOError.swift */; };
+		28B67F6825AC30450033385B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B67F6725AC30450033385B /* AppDelegate.swift */; };
+		28B67F6A25AC30450033385B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B67F6925AC30450033385B /* SceneDelegate.swift */; };
+		28B67F6C25AC30450033385B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B67F6B25AC30450033385B /* ViewController.swift */; };
+		28B67F6F25AC30450033385B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28B67F6D25AC30450033385B /* Main.storyboard */; };
+		28B67F7125AC30470033385B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B67F7025AC30470033385B /* Assets.xcassets */; };
+		28B67F7425AC30470033385B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28B67F7225AC30470033385B /* LaunchScreen.storyboard */; };
+		28B67F7A25AC305A0033385B /* SOCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28374DE8252876DC007A64FE /* SOCodable.framework */; };
+		28B67F7B25AC305A0033385B /* SOCodable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 28374DE8252876DC007A64FE /* SOCodable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		28B67F7E25AC35660033385B /* DBCache.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 28B67F7D25AC35660033385B /* DBCache.xcdatamodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		28B67F7C25AC305A0033385B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				28B67F7B25AC305A0033385B /* SOCodable.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		28374DE8252876DC007A64FE /* SOCodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SOCodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28374DEB252876DC007A64FE /* SOCodable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOCodable.h; sourceTree = "<group>"; };
@@ -44,7 +66,6 @@
 		28374DF6252876DD007A64FE /* SOCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOCodableTests.swift; sourceTree = "<group>"; };
 		28374DF8252876DD007A64FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28374E03252876F1007A64FE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
-		28374E062528771E007A64FE /* DBCache.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DBCache.xcdatamodel; sourceTree = "<group>"; };
 		28374E0825287748007A64FE /* SOCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOCodable.swift; sourceTree = "<group>"; };
 		28374E0D2528784C007A64FE /* DictionaryArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryArray.swift; sourceTree = "<group>"; };
 		28374E0F2528785A007A64FE /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
@@ -54,9 +75,18 @@
 		28374E17252878D3007A64FE /* Encodable+NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+NSObject.swift"; sourceTree = "<group>"; };
 		28374E19252878F5007A64FE /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
 		28374E252528C9C9007A64FE /* SODatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SODatabaseManager.swift; sourceTree = "<group>"; };
-		28374E292528CA8D007A64FE /* DBCacheMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBCacheMO+CoreDataClass.swift"; sourceTree = "<group>"; };
-		28374E2A2528CA8D007A64FE /* DBCacheMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBCacheMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		28374E292528CA8D007A64FE /* DBCache+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBCache+CoreDataClass.swift"; sourceTree = "<group>"; };
+		28374E2A2528CA8D007A64FE /* DBCache+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBCache+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		28374E2D2528CA9D007A64FE /* SOError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOError.swift; sourceTree = "<group>"; };
+		28B67F6525AC30450033385B /* SOCodableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOCodableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28B67F6725AC30450033385B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		28B67F6925AC30450033385B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		28B67F6B25AC30450033385B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		28B67F6E25AC30450033385B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		28B67F7025AC30470033385B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28B67F7325AC30470033385B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		28B67F7525AC30470033385B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28B67F7D25AC35660033385B /* DBCache.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = DBCache.xcdatamodel; path = Models/DBCache.xcdatamodeld/DBCache.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +106,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		28B67F6225AC30450033385B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B67F7A25AC305A0033385B /* SOCodable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -84,6 +122,7 @@
 			children = (
 				28374DEA252876DC007A64FE /* SOCodable */,
 				28374DF5252876DD007A64FE /* SOCodableTests */,
+				28B67F6625AC30450033385B /* SOCodableDemo */,
 				28374DE9252876DC007A64FE /* Products */,
 				28374E02252876F1007A64FE /* Frameworks */,
 			);
@@ -94,6 +133,7 @@
 			children = (
 				28374DE8252876DC007A64FE /* SOCodable.framework */,
 				28374DF1252876DC007A64FE /* SOCodableTests.xctest */,
+				28B67F6525AC30450033385B /* SOCodableDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +146,7 @@
 				28374E0825287748007A64FE /* SOCodable.swift */,
 				28374E252528C9C9007A64FE /* SODatabaseManager.swift */,
 				28374E282528CA34007A64FE /* Models */,
+				28B67F7D25AC35660033385B /* DBCache.xcdatamodel */,
 				28374E0C25287836007A64FE /* Extentions */,
 				28374DEC252876DC007A64FE /* Info.plist */,
 			);
@@ -146,11 +187,24 @@
 		28374E282528CA34007A64FE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				28374E292528CA8D007A64FE /* DBCacheMO+CoreDataClass.swift */,
-				28374E2A2528CA8D007A64FE /* DBCacheMO+CoreDataProperties.swift */,
-				28374E052528771E007A64FE /* SODatabase.xcdatamodeld */,
+				28374E292528CA8D007A64FE /* DBCache+CoreDataClass.swift */,
+				28374E2A2528CA8D007A64FE /* DBCache+CoreDataProperties.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		28B67F6625AC30450033385B /* SOCodableDemo */ = {
+			isa = PBXGroup;
+			children = (
+				28B67F6725AC30450033385B /* AppDelegate.swift */,
+				28B67F6925AC30450033385B /* SceneDelegate.swift */,
+				28B67F6B25AC30450033385B /* ViewController.swift */,
+				28B67F6D25AC30450033385B /* Main.storyboard */,
+				28B67F7025AC30470033385B /* Assets.xcassets */,
+				28B67F7225AC30470033385B /* LaunchScreen.storyboard */,
+				28B67F7525AC30470033385B /* Info.plist */,
+			);
+			path = SOCodableDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +257,24 @@
 			productReference = 28374DF1252876DC007A64FE /* SOCodableTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		28B67F6425AC30450033385B /* SOCodableDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28B67F7825AC30470033385B /* Build configuration list for PBXNativeTarget "SOCodableDemo" */;
+			buildPhases = (
+				28B67F6125AC30450033385B /* Sources */,
+				28B67F6225AC30450033385B /* Frameworks */,
+				28B67F6325AC30450033385B /* Resources */,
+				28B67F7C25AC305A0033385B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SOCodableDemo;
+			productName = SOCodableDemo;
+			productReference = 28B67F6525AC30450033385B /* SOCodableDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -218,6 +290,9 @@
 						LastSwiftMigration = 1150;
 					};
 					28374DF0252876DC007A64FE = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					28B67F6425AC30450033385B = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
@@ -237,6 +312,7 @@
 			targets = (
 				28374DE7252876DC007A64FE /* SOCodable */,
 				28374DF0252876DC007A64FE /* SOCodableTests */,
+				28B67F6425AC30450033385B /* SOCodableDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -256,6 +332,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		28B67F6325AC30450033385B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B67F7425AC30470033385B /* LaunchScreen.storyboard in Resources */,
+				28B67F7125AC30470033385B /* Assets.xcassets in Resources */,
+				28B67F6F25AC30450033385B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -268,13 +354,13 @@
 				28374E102528785A007A64FE /* Dictionary.swift in Sources */,
 				28374E18252878D3007A64FE /* Encodable+NSObject.swift in Sources */,
 				28374E16252878BA007A64FE /* NSObject.swift in Sources */,
-				28374E072528771E007A64FE /* SODatabase.xcdatamodeld in Sources */,
 				28374E0E2528784C007A64FE /* DictionaryArray.swift in Sources */,
 				28374E1225287866007A64FE /* Encodable.swift in Sources */,
-				28374E2B2528CA8D007A64FE /* DBCacheMO+CoreDataClass.swift in Sources */,
+				28B67F7E25AC35660033385B /* DBCache.xcdatamodel in Sources */,
+				28374E2B2528CA8D007A64FE /* DBCache+CoreDataClass.swift in Sources */,
 				28374E262528C9C9007A64FE /* SODatabaseManager.swift in Sources */,
 				28374E2E2528CA9D007A64FE /* SOError.swift in Sources */,
-				28374E2C2528CA8D007A64FE /* DBCacheMO+CoreDataProperties.swift in Sources */,
+				28374E2C2528CA8D007A64FE /* DBCache+CoreDataProperties.swift in Sources */,
 				28374E1A252878F5007A64FE /* Realm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +373,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		28B67F6125AC30450033385B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B67F6C25AC30450033385B /* ViewController.swift in Sources */,
+				28B67F6825AC30450033385B /* AppDelegate.swift in Sources */,
+				28B67F6A25AC30450033385B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -296,6 +392,25 @@
 			targetProxy = 28374DF3252876DC007A64FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		28B67F6D25AC30450033385B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28B67F6E25AC30450033385B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		28B67F7225AC30470033385B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28B67F7325AC30470033385B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		28374DFA252876DD007A64FE /* Debug */ = {
@@ -503,6 +618,42 @@
 			};
 			name = Release;
 		};
+		28B67F7625AC30470033385B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2RW34KLZ83;
+				INFOPLIST_FILE = SOCodableDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chaitanyaSoni.SOCodableDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		28B67F7725AC30470033385B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2RW34KLZ83;
+				INFOPLIST_FILE = SOCodableDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chaitanyaSoni.SOCodableDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -533,20 +684,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-/* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		28374E052528771E007A64FE /* SODatabase.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				28374E062528771E007A64FE /* DBCache.xcdatamodel */,
+		28B67F7825AC30470033385B /* Build configuration list for PBXNativeTarget "SOCodableDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28B67F7625AC30470033385B /* Debug */,
+				28B67F7725AC30470033385B /* Release */,
 			);
-			currentVersion = 28374E062528771E007A64FE /* DBCache.xcdatamodel */;
-			path = SODatabase.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-/* End XCVersionGroup section */
+/* End XCConfigurationList section */
 	};
 	rootObject = 28374DDF252876DC007A64FE /* Project object */;
 }

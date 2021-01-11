@@ -1,5 +1,5 @@
 //
-//  DBCacheMO+CoreDataClass.swift
+//  DBCache+CoreDataClass.swift
 //  SOCodable
 //
 //  Created by Chaitanya Soni on 03/10/20.
@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 
-public class DBCacheMO: NSManagedObject {
+public class DBCache: NSManagedObject {
 
 }

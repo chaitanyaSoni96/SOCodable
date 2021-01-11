@@ -8,19 +8,12 @@
 
 import Foundation
 
-
-//let expiryTime: TimeInterval = 60 * 60 * 24 * 7 //in seconds - a week (secs * mins * hrs * days)
-
-
-
-class SOCodable: NSObject & Codable {
-    var expiryTime: TimeInterval = 60 * 60 * 24 * 7 //in seconds - a week (secs * mins * hrs * days)
+public protocol SOCodable: Codable {
+	static var uniqueID: String { get }
+	static var expiryTime: TimeInterval { get }
 }
-
-
-
-extension SOCodable {
-    func saveToDisk() throws {
+public extension SOCodable {
+	func saveToDisk() throws {
         
         guard let jsonString = self.stringValue else {
             throw SOError(message: "Invalid Codable")
@@ -28,9 +21,9 @@ extension SOCodable {
         
         do {
             
-            try SODatabaseManager.shared.save(codableType: self.className,
+			try SODatabaseManager.shared.save(codableType: Self.uniqueID,
                                             jsonString: jsonString,
-                                            expiryTime: Date().addingTimeInterval(self.expiryTime))
+                                            expiryTime: Date().addingTimeInterval(Self.expiryTime))
             
         } catch {
             
@@ -39,9 +32,9 @@ extension SOCodable {
         }
     }
     
-    func getFromDisk(ignoresExpiry: Bool = false) -> Self? {
+	static func getFromDisk(ignoresExpiry: Bool = false) -> Self? {
         
-        let dbCache = SODatabaseManager.shared.fetch(codableType: self.className)
+        let dbCache = SODatabaseManager.shared.fetch(codableType: self.uniqueID)
         
         let whenDataExpires = (dbCache?.updateDate.addingTimeInterval(expiryTime) as Date? ?? Date.init(timeIntervalSince1970: 0)) as Date
         let dateTimeNow = Date()
@@ -49,12 +42,57 @@ extension SOCodable {
         let expired = dateTimeNow > whenDataExpires
         
         let dataFromDB: Self? = Self.fromDict(dbCache?.jsonString.convertToDictionary() ?? [:])
-        return ignoresExpiry ? dataFromDB : expired ? nil : dataFromDB
+		return (ignoresExpiry || Self.expiryTime == 0) ? dataFromDB : expired ? nil : dataFromDB
         
     }
-    
-    
 }
+
+//let expiryTime: TimeInterval = 60 * 60 * 24 * 7 //in seconds - a week (secs * mins * hrs * days)
+
+
+
+//class SOCodable: NSObject & Codable {
+//    var expiryTime: TimeInterval = 60 * 60 * 24 * 7 //in seconds - a week (secs * mins * hrs * days)
+//}
+
+
+
+//extension SOCodable {
+//    func saveToDisk() throws {
+//
+//        guard let jsonString = self.stringValue else {
+//            throw SOError(message: "Invalid Codable")
+//        }
+//
+//        do {
+//
+//            try SODatabaseManager.shared.save(codableType: self.className,
+//                                            jsonString: jsonString,
+//                                            expiryTime: Date().addingTimeInterval(self.expiryTime))
+//
+//        } catch {
+//
+//            throw SOError(message: "Save to CoreData Failed")
+//
+//        }
+//    }
+//
+//    func getFromDisk(ignoresExpiry: Bool = false) -> Self? {
+//
+//        let dbCache = SODatabaseManager.shared.fetch(codableType: self.className)
+//
+//        let whenDataExpires = (dbCache?.updateDate.addingTimeInterval(expiryTime) as Date? ?? Date.init(timeIntervalSince1970: 0)) as Date
+//        let dateTimeNow = Date()
+//
+//        let expired = dateTimeNow > whenDataExpires
+//
+//        let dataFromDB: Self? = Self.fromDict(dbCache?.jsonString.convertToDictionary() ?? [:])
+//        return ignoresExpiry ? dataFromDB : expired ? nil : dataFromDB
+//
+//    }
+//
+//
+//}
 
 
 

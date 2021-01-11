@@ -12,12 +12,13 @@ import CoreData
 class SODatabaseManager {
     static let shared = SODatabaseManager()
     
-    lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "SODatabase")
+    var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "DBCache")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
+			print(storeDescription)
         })
         return container
     }()
@@ -26,7 +27,7 @@ class SODatabaseManager {
         let updateDate = Date()
         
         let context = persistentContainer.viewContext
-        let fetchRequest = DBCacheMO.createFetchRequest()
+        let fetchRequest = DBCache.createFetchRequest()
         fetchRequest.predicate = NSPredicate(format: "codableType = '\(codableType)'")
         
         let existingDBCacheArray = try? context.fetch(fetchRequest)
@@ -38,7 +39,7 @@ class SODatabaseManager {
             existingCache.expiryTime = expiryTime
             existingCache.jsonString = jsonString
             
-        } else if let dbCache = NSEntityDescription.insertNewObject(forEntityName: "DBCacheMO", into: context) as? DBCacheMO {
+        } else if let dbCache = NSEntityDescription.insertNewObject(forEntityName: "DBCache", into: context) as? DBCache {
             
             dbCache.codableType = codableType
             dbCache.updateDate = updateDate
@@ -54,10 +55,10 @@ class SODatabaseManager {
         
     }
     
-    func fetch(codableType: String) -> DBCacheMO? {
+    func fetch(codableType: String) -> DBCache? {
         
         let context = persistentContainer.viewContext
-        let fetchRequest = DBCacheMO.createFetchRequest()
+        let fetchRequest = DBCache.createFetchRequest()
         fetchRequest.predicate = NSPredicate(format: "codableType = '\(codableType)'")
         
         let existingDBCacheArray = try? context.fetch(fetchRequest)
@@ -68,7 +69,7 @@ class SODatabaseManager {
     func deleteAll() {
         
         let context = persistentContainer.viewContext
-        try? context.execute(NSBatchDeleteRequest(fetchRequest: NSFetchRequest<NSFetchRequestResult>(entityName: "DBCacheMO")))
+        try? context.execute(NSBatchDeleteRequest(fetchRequest: NSFetchRequest<NSFetchRequestResult>(entityName: "DBCache")))
         
     }
     

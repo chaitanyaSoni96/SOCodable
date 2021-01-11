@@ -1,5 +1,5 @@
 //
-//  DBCacheMO+CoreDataProperties.swift
+//  DBCache+CoreDataProperties.swift
 //  SOCodable
 //
 //  Created by Chaitanya Soni on 03/10/20.
@@ -11,10 +11,10 @@ import Foundation
 import CoreData
 
 
-extension DBCacheMO {
+extension DBCache {
 
-    @nonobjc public class func createFetchRequest() -> NSFetchRequest<DBCacheMO> {
-        return NSFetchRequest<DBCacheMO>(entityName: "DBCache")
+    @nonobjc public class func createFetchRequest() -> NSFetchRequest<DBCache> {
+        return NSFetchRequest<DBCache>(entityName: "DBCache")
     }
 
     @NSManaged public var codableType: String
